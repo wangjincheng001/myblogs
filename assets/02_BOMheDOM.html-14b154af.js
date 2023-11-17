@@ -1,0 +1,1 @@
+const t=JSON.parse('{"key":"v-4697fbd8","path":"/docs/Javascript/02_BOMheDOM.html","title":"02_BOM和DOM","lang":"en-US","frontmatter":{"title":"02_BOM和DOM","date":"2023/11/17"},"headers":[],"git":{},"filePathRelative":"docs/Javascript/02_BOM和DOM.md"}');export{t as data};
