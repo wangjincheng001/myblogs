@@ -1,0 +1,1 @@
+const t=JSON.parse('{"key":"v-375d14e1","path":"/docs/studyEnglish/yufa.html","title":"","lang":"en-US","frontmatter":{},"headers":[],"git":{},"filePathRelative":"docs/studyEnglish/语法.md"}');export{t as data};
