@@ -1,0 +1,1 @@
+import{_ as e,o as t,c as s,a as c}from"./app-c5b6f358.js";const o={},_=c("p",null,"嘎嘎嘎",-1),a=[_];function n(i,r){return t(),s("div",null,a)}const h=e(o,[["render",n],["__file","beiyihuashi2023.html.vue"]]);export{h as default};
