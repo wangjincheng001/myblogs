@@ -1,0 +1,14 @@
+import{_ as n,o as s,c as a,e}from"./app-5a1615ea.js";const t={},p=e(`<h2 id="内存分区" tabindex="-1"><a class="header-anchor" href="#内存分区" aria-hidden="true">#</a> 内存分区</h2><ul><li>基本数据类型，是存储在栈区的</li><li>引用数据类型是存储在堆区，堆区的地址，还是保存在栈区</li></ul><h2 id="闭包" tabindex="-1"><a class="header-anchor" href="#闭包" aria-hidden="true">#</a> 闭包</h2><div class="language-javascript line-numbers-mode" data-ext="js"><pre class="language-javascript"><code><span class="token keyword">function</span> <span class="token function">f1</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token keyword">var</span> n <span class="token operator">=</span> <span class="token number">999</span><span class="token punctuation">;</span>
+  <span class="token keyword">function</span> <span class="token function">f2</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>n<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">return</span> f2<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">var</span> result <span class="token operator">=</span> <span class="token function">f1</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">result</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//999</span>
+
+<span class="token comment">//如果再次调用</span>
+<span class="token comment">//result();//1000</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>首先ECG进栈：</p><ul><li>result = undefined</li><li>堆内存开辟f1的内存空间,设ox111</li></ul><p>然后ECf1进栈：</p><ul><li><p>n = 999</p></li><li><p>堆内存开辟f2的内存空间,设ox222</p><p>ox222空间中引用了ECf1栈空间的n</p></li><li><p>ECG栈中的result 指向f1内存中的 ox222</p></li></ul><p>然后ECf1出栈：</p><ul><li>此时，ox222空间中引用了ECf1栈空间的n，ECf1无法出栈，数据依旧被保存</li></ul><p>最后ECG出栈：</p><ul><li>ECG栈中的result 指向f1内存中的 ox222，ECG无法出栈，数据依旧被保存</li></ul>`,12),l=[p];function i(o,c){return s(),a("div",null,l)}const r=n(t,[["render",i],["__file","bibao.html.vue"]]);export{r as default};
